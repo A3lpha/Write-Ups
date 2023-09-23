@@ -5,10 +5,10 @@ In this repo are stored various write ups for challenges and labs that I have ei
 
 # Contents
 
-- ### [TryHackMe](https://github.com/A3lpha/Write-Ups/tree/main/THM)
+- ### [TryHackMe](https://github.com/A3lpha/Write-Ups/tree/main/TryHackMe)
 
-- ### [Hack the Box](https://github.com/A3lpha/Write-Ups/tree/main/HTB)
+- ### [Hack the Box](https://github.com/A3lpha/Write-Ups/tree/main/Hack the Box)
   
-- ### [Vulnhub](https://github.com/A3lpha/Write-Ups/tree/main/HTB)
+- ### [Vulnhub](https://github.com/A3lpha/Write-Ups/tree/main/Vulnhub)
 
-- ### [Capture the Flag](https://github.com/A3lpha/Write-Ups/tree/main/CTF)
+- ### [picoCTF](https://github.com/A3lpha/Write-Ups/tree/main/picoCTF)
