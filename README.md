@@ -7,7 +7,7 @@ In this repo are stored various write ups for challenges and labs that I have ei
 
 - ### [TryHackMe](https://github.com/A3lpha/Write-Ups/tree/main/TryHackMe)
 
-- ### [Hack the Box](https://github.com/A3lpha/Write-Ups/tree/main/Hack the Box)
+- ### [Hack the Box](https://github.com/A3lpha/Write-Ups/tree/main/Hack%20the%20Box)
   
 - ### [Vulnhub](https://github.com/A3lpha/Write-Ups/tree/main/Vulnhub)
 
