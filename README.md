@@ -1,7 +1,7 @@
 # Write-Ups
 # Write Ups for Various Hacking Things 
 
-In this repo are stored various write ups for challenges and labs that I have either worked on or solved. These are from , TryHackMe Hack the Box vulnhub and Capture the Flag competitions I get to be a part of.
+In this repo are stored various write ups for challenges and labs that I have either worked on or solved. These are from , TryHackMe Hack the Box vulnhub and picoCTF competitions I get to be a part of.
 
 # Contents
 
