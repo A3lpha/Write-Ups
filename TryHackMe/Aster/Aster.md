@@ -24,6 +24,7 @@ Running: Linux 5.X
 OS CPE: cpe:/o:linux:linux_kernel:5.4
 OS details: Linux 5.4
 ~~~
+[](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/Aster/port80.png)
 # #2 
 We discover a hidden directory service using gobuster
 ~~~
