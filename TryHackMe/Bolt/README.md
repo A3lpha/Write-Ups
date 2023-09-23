@@ -1,9 +1,17 @@
+# Bolt
+This room is designed for users to get familiar with the Bolt CMS and how it can be exploited using Authenticated Remote Code Execution. You should wait for at least 3-4 minutes for the machine to start properly.
+
+If you have any queries or feedback you can reach me through the TryHackMe Discord server or through Twitter.
+
+Start the machine
+
+# #1 
+**What port number has a web server with a CMS running?**
+
+Let's start by enumerating the services running on the machine with Nmap:
 
 
-
-
-
-```powershell
+```
 └─$ sudo nmap -sC -sV 10.10.163.6  
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-10-20 07:40 EDT
 Nmap scan report for 10.10.163.6
