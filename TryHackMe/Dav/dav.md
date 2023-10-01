@@ -166,7 +166,9 @@ nmap  nmap-v2  passwd.dav  php-reverse-shell.php
 <hr />
 <address>Apache/2.4.18 (Ubuntu) Server at 10.10.161.184 Port 80</address>
 </body></html>
-                                                                                                                                     
+~~~
+Let’s use cadaver to upload a PHP reverse shell:
+~~~                                                                                                                       
 ┌──(alpha㉿sploit)-[~/ctf/DAv]
 └─$ cadaver http://10.10.161.184/webdav/                         
 Authentication required for webdav on server `10.10.161.184':
