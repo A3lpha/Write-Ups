@@ -1,3 +1,21 @@
+
+
+
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/blog/assets/cover.png)
+<img src='https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/blog/assets/banner.png' style='zoom: 80%;' align=left /> <font size='10'><blog></font>
+
+1<sup>st</sup> August 2023
+
+Prepared By: `<https://tryhackme.com/p/Al3pha>`
+
+Challenge Author(s): `<(https://tryhackme.com/p/Nameless0ne)>`
+
+Difficulty: <font color='orange'>Medium</font>
+
+<br><br>
+
+***NOTE : The headings with `(!)` should be necessarily included in your writeup while the ones with `(*)` are optional and should be included only if there is a need to. Of course, you can modify the content of each section accordingly. We just provide some boilerplate text.***
+
 ~~~
 ┌──(alpha㉿sploit)-[~/blog]
 └─$ ping blog.thm    
