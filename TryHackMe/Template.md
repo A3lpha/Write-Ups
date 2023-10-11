@@ -1,6 +1,6 @@
 # Blue
 
-![tryhackme.com - © TryHackMe](.gitbook/assets/tryhackme-logo-small.png)
+![tryhackme.com - © TryHackMe](tryhackme-logo-small.png)
 
 ## Room Info
 
