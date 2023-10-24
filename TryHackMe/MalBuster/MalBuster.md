@@ -8,9 +8,9 @@ You are tasked to analyse unknown malware samples detected by your SOC team.
 
 > **Name**
 >
-> 🔗 [Blue](https://tryhackme.com/room/blue)
+> [malbuster](https://tryhackme.com/room/malbuster)
 >
-> ![](.gitbook/assets/blue.jpg)
+> 
 >
 > **Description**
 >
@@ -43,84 +43,38 @@ Based on the ARCHITECTURE of the binary, is malbuster_1 a 32-bit or a 64-bit app
 ~~~
 ![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/md5.png)
 
+3. Using the hash, what is the number of detections of malbuster_1 in VirusTotal?
 
-## Flags
+![](2111)
 
-* In the `meterpreter` session
+4. Based on VirusTotal detection, what is the malware signature of malbuster_2 according to Avira?
+~~~~
+HEUR/AGEN.1202219
+~~~~
+5. malbuster_2 imports the function _CorExeMain. From which DLL file does it import this function?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2014_58_06-Window.png)
+6. Based on the VS_VERSION_INFO header, what is the original name of malbuster_2?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_16_39-Window.png)
+7. Using the hash of malbuster_3, what is its malware signature based on abuse.ch?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2014_39_47-Window.png)
+8. Using the hash of malbuster_4, what is its malware signature based on abuse.ch?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2014_41_01-Window.png)
+9. What is the message found in the DOS_STUB of malbuster_4?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2014_56_21-Window.png)
+10. malbuster_4 imports the function ShellExecuteA. From which DLL file does it import this function?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_03_02-Window.png)
+11. Using capa, how many anti-VM instructions were identified in malbuster_1?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_02_26-Window.png)
+12. Using capa, which binary can log keystrokes?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/keystrokes.png)
+13. Using capa, what is the MITRE ID of the DISCOVERY technique used by malbuster_4?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_16_39-Window.png)
+14. Which binary contains the string GodMode?  
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_24_11-Window.png)
 
-```bash
-cd C:\\
-dir
-cat flag1.txt
-```
+16. Which binary contains the string Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)?
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/2023-10-24%2015_20_46-Window.png)
 
-
-
-<details>
-
-<summary>Reveal Flag1: 🚩</summary>
-
-
-
-`flag{access_the_machine}`
-
-
-
-<img src=".gitbook/assets/image-20230316143237356.png" alt="" data-size="original">
-
-</details>
-
-
-
-```bash
-cd C:/Windows/System32/config
-cat flag2.txt
-```
-
-
-
-
-
-
-<details>
-
-<summary>Reveal Flag2: 🚩</summary>
-
-
-
-`flag{sam_database_elevated_access}`
-
-
-
-<img src=".gitbook/assets/image-20230316143502259.png" alt="" data-size="original">
-
-</details>
-
-
-
-```bash
-cd C:\\Users\\
-dir
-cd Jon
-cd Documents
-cat flag3.txt
-```
-
-
-
-<details>
-
-<summary>Reveal Flag3: 🚩</summary>
-
-
-
-`flag{admin_documents_can_be_valuable}`
-
-
-
-<img src=".gitbook/assets/image-20230316143807868.png" alt="" data-size="original">
-
-</details>
 
 
 ***
