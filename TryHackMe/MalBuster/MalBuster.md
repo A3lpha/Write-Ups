@@ -32,14 +32,17 @@ Good luck!﻿.*
 Task 1 No Needed Answer
 
 Task 2  Challenge Questions
+
 Based on the ARCHITECTURE of the binary, is malbuster_1 a 32-bit or a 64-bit application? (32-bit/64-bit)
-~~~~
-23
-~~~~
+
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/architecture.png)
 
 2. What is the MD5 hash of malbuster_1?
 ~~~
 4348da65e4aeae6472c7f97d6dd8ad8f
+~~~
+![](https://github.com/A3lpha/Write-Ups/blob/main/TryHackMe/MalBuster/MalBuster/md5.png)
+
 
 ## Flags
 
