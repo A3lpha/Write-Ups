@@ -118,6 +118,7 @@ Interesting Finding(s):
 [SUCCESS] - c0ldd / 9876543210
 ~~~
 ![](images/upload.png)
+![](images/reverseshell.png)
 ~~~
 ┌──(alpha㉿sploit)-[~/ctf/colddbox]
 └─$ nc -nvlp 1234
