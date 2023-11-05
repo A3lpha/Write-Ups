@@ -61,7 +61,8 @@ Finished
 ![](images/default-wep-page.png)
 ![](images/webview.png)
 ![](images/navigate.png)
-![](cve.png)
+
+![](images/cve.png)
 
 ~~~
 ┌──(alpha㉿sploit)-[~/blackpearl]
