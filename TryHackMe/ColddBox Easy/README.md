@@ -1,3 +1,6 @@
+# ColddBox: Easy
+![](images/logo.png)
+An easy level machine with multiple ways to escalate privileges.
 nmap
 ~~~
 colddbox
