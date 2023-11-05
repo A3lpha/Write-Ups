@@ -183,6 +183,10 @@ cat: user.txt: Permission denied
 www-data@ColddBox-Easy:/home/c0ldd$ cat user.txt
 cat user.txt
 cat: user.txt: Permission denied
+www-data@ColddBox-Easy:/home/c0ldd$
+~~~
+![](images/hidden.png)
+~~~
 www-data@ColddBox-Easy:/home/c0ldd$ cd /var/www/html
 cd /var/www/html
 www-data@ColddBox-Easy:/var/www/html$ ls
@@ -233,6 +237,9 @@ user.txt
 c0ldd@ColddBox-Easy:~$ cat us                                                                                                                                          
 cat user.txt                                                                                                                                                           
 RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ==
+~~~
+flag rooot
+~~~
 c0ldd@ColddBox-Easy:~$ sudo -l
 sudo -l
 [sudo] password for c0ldd: cybersecurity
