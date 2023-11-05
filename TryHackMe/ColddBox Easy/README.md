@@ -1,50 +1,20 @@
 # ColddBox: Easy
 ![](images/logo.png)
 An easy level machine with multiple ways to escalate privileges.
-nmap
+
+## nmap
 ~~~
-colddbox
-                                                                                                                                                                       
-┌──(alpha㉿sploit)-[~/ctf]
-└─$ cd colddbox 
-                                                                                                                                                                       
-┌──(alpha㉿sploit)-[~/ctf/colddbox]
-└─$ ping 10.10.212.21      
-PING 10.10.212.21 (10.10.212.21) 56(84) bytes of data.
-64 bytes from 10.10.212.21: icmp_seq=1 ttl=63 time=243 ms
-64 bytes from 10.10.212.21: icmp_seq=2 ttl=63 time=162 ms
-^Z
-zsh: suspended  ping 10.10.212.21
-                                                                                                                                                                       
-┌──(alpha㉿sploit)-[~/ctf/colddbox]
-└─$ sudo nmap -sV -sC -A -Pn 10.10.212.21 -Ao nmap
-[sudo] password for alpha: 
-Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-05 21:23 EST
-Stats: 0:05:32 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
-SYN Stealth Scan Timing: About 79.48% done; ETC: 21:30 (0:01:24 remaining)
-Stats: 0:13:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
-NSE Timing: About 85.03% done; ETC: 21:37 (0:00:00 remaining)
-Nmap scan report for 10.10.212.21
-Host is up (0.16s latency).
-Not shown: 999 closed tcp ports (
+nmap -sV -sC -A -Pn 10.10.212.21 -Ao nmap
+~~~
+~~~
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: ColddBox | One more machine
+|_http-generator: WordPress 4.1.31
 ~~~
 gobuster
 ~~~
-┌──(alpha㉿sploit)-[~/ctf/colddbox]
-└─$ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.10.212.21
-===============================================================
-Gobuster v3.6
-by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://10.10.212.21
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.6
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.10.212.21
 ===============================================================
 /wp-content           (Status: 301) [Size: 317] [--> http://10.10.212.21/wp-content/]
 /wp-includes          (Status: 301) [Size: 318] [--> http://10.10.212.21/wp-includes/]
