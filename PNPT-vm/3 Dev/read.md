@@ -299,7 +299,8 @@ zip [-options] [-b path] [-t mmddyyyy] [-n suffixes] [zipfile list] [-xi list]
   -e   encrypt                      -n   don't compress these suffixes
   -h2  show more help
   
-jeanpaul@dev:~$ 
+jeanpaul@dev:~$
+~~~
 [](https://gtfobins.github.io/gtfobins/zip/#sudo)
 ~~~
 jeanpaul@dev:~$ TF=$(mktemp -u)
