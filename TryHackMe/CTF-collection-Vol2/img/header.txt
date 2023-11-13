@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Mon, 13 Nov 2023 20:20:38 GMT
+Server: Apache/2.2.22 (Ubuntu)
+X-Powered-By: PHP/5.3.10-1ubuntu3.26
+Busted: Hey, you found me, take this Easter 6: THM{l37'5_p4r7y_h4rd}
+Set-Cookie: Invited=0
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+Content-Type: text/html
+
