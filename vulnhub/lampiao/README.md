@@ -1,3 +1,12 @@
+# Description
+
+Would you like to keep hacking in your own lab?
+
+Try this brand new vulnerable machine! "Lampião 1".
+
+Get root!
+
+Level: Easy
 ~~~
  Currently scanning: 192.168.129.0/16   |   Screen View: Unique Hosts                                         
                                                                                                               
@@ -81,7 +90,7 @@ Finished
 
 ![](drupal.png)
 
-msfconsole
+# msfconsole
 ~~~
 ┌──(alpha㉿Sploit)-[~/vulnhub/lampiao]
 └─$ msfconsole            
