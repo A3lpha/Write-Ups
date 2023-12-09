@@ -1,0 +1,60 @@
+# Nmap 7.94SVN scan initiated Sun Nov 12 06:05:56 2023 as: nmap -sV -sC -vv -Ao nmap-2 10.10.112.119
+Increasing send delay for 10.10.112.119 from 0 to 5 due to 146 out of 485 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 5 to 10 due to 12 out of 39 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 10 to 20 due to 11 out of 28 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 20 to 40 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 40 to 80 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 80 to 160 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 160 to 320 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 320 to 640 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 10.10.112.119 from 640 to 1000 due to 11 out of 11 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of 9668315 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9668315 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 8979528 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 8979528 microseconds.  Ignoring time.
+Nmap scan report for 10.10.112.119
+Host is up, received echo-reply ttl 63 (0.18s latency).
+Scanned at 2023-11-12 06:05:57 EST for 621s
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b7:4c:d0:bd:e2:7b:1b:15:72:27:64:56:29:15:ea:23 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbZAxRhWUij6g6MP11OkGSk7vYHRNyQcTIdMmjj1kSvDhyuXS9QbM5t2qe3UMblyLaObwKJDN++KWfzl1+beOrq3sXkTA4Wot1RyYo0hPdQT0GWBTs63dll2+c4yv3nDiYAwtSsPLCeynPEmSUGDjkVnP12gxXe/qCsM2+rZ9tzXtSWiXgWvaxMZiHaQpT1KaY0z6ebzBTI8siU0t+6SMK7rNv1CsUNpGeicfbC5ZOE4/Nbc8cxNl7gDtZbyjdh9S7KTvzkSj2zBJ+8VbzsuZk1yy8uyLDgmuBQ6LzbYUNHkTQhJetVq7utFpRqLdpSJTcsz5PAxd1Upe9DqoYURuL
+|   256 b7:85:23:11:4f:44:fa:22:00:8e:40:77:5e:cf:28:7c (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEYCha8jk+VzcJRRwV41rl8EuJBiy7Cf8xg6tX41bZv0huZdCcCTCq9dLJlzO2V9s+sMp92TpzR5j8NAAuJt0DA=
+|   256 a9:fe:4b:82:bf:89:34:59:36:5b:ec:da:c2:d3:95:ce (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOJnY5oycmgw6ND6Mw4y0YQWZiHoKhePo4bylKKCP0E5
+10000/tcp open  http    syn-ack ttl 63 MiniServ 1.890 (Webmin httpd)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+|_http-favicon: Unknown favicon MD5: 6151BE8DE61CD1F62C234D76A88DA647
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=11/12%OT=22%CT=1%CU=34960%PV=Y%DS=2%DC=T%G=Y%TM=655
+OS:0B402%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=9
+OS:)SEQ(SP=107%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=107%GCD=3%ISR=108%T
+OS:I=Z%CI=Z%II=I%TS=A)OPS(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=
+OS:M508ST11NW6%O5=M508ST11NW6%O6=M508ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4
+OS:B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%
+OS:DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A
+OS:=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=
+OS:G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 28.998 days (since Sat Oct 14 07:19:52 2023)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT       ADDRESS
+1   177.43 ms 10.8.0.1
+2   176.65 ms 10.10.112.119
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 12 06:16:18 2023 -- 1 IP address (1 host up) scanned in 621.89 seconds
