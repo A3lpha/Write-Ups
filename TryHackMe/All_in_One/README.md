@@ -151,7 +151,7 @@ Interesting Finding(s):
 [+] Elapsed time: 00:00:33
 ```
 
-![[All_in_One/img/2.png]]
+![All_in_One](img/2.png)
 
 ```
 └─$ nc -nlvp 1234               
