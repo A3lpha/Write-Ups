@@ -49,6 +49,11 @@ Finished
 
 ![GamingServer](img/1.png)
 
+markaan tagay upload directory waxan kaso helay fileskaan
+
+![GamingServer](img/2.png)
+
+
 ```bash
 ┌──(alpha㉿Sploit)-[~/ctf/GamingServer]
 └─$ wget http://10.10.55.234/uploads/manifesto.txt
