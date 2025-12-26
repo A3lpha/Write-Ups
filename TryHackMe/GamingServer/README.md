@@ -87,7 +87,8 @@ meme.jpg                          100%[=========================================
 ```
 sawirkaan waa mene waana mid wax aanan ku jirin
 
-![](img/meme.jpg)
+![](meme.jpg)
+
 - dict.lst waxaa ku jira list users ah
 - manifesto sido kale asigan waxaa ku jiro waa sheko iska yar
 ## intaan yar waxaanka helay username midkaaso loo yaqaano john```
@@ -100,7 +101,9 @@ sawirkaan waa mene waana mid wax aanan ku jirin
 ```
 sidaan marki hore aan kuso arakney waxa jirtey port ssh furnaa marka waxaan isku dayey inaan userkaas aan helay iyo passowrdka aanku dayo inu ku shaqaynaayo brute force
 laakin wuu iga dhidey
+
 ![GamingServer](img/3.png)
+
 ```bash
 ┌──(alpha㉿Sploit)-[~/ctf/GamingServer]
 └─$ wget http://10.10.55.234/secret/secretKey
